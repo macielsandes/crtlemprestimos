@@ -23,19 +23,17 @@ class MaterialController extends Controller
        $this->model = $material;
    }    
     
-   //Função responsavel pela index 
+   // função da pagina inicial
     public function index(Request $request)
     {
         $materials = $this-> model
-        ->getMaterials(
-            search: $request ->search ?? ''
+        -> getMaterials( search: 
+            $request ->search ?? '' 
         );
-
-        return view ('materials.index', compact('materials'));
- 
+        return view ('materials.index', compact('materials')); 
     }
-
-     //controle para mostrar material
+     
+    //controle para mostrar material
      public function show($id)
      {
          //$user = User::where ('id',$id) ->first();
@@ -58,7 +56,7 @@ class MaterialController extends Controller
     {
         $material = new Material();
         
-        $material->create($request->all());
+        dd($material->create($request->all()));
 
         return redirect()-> route ('materials.index');
     
