@@ -9,6 +9,11 @@ class User extends Model
 {
     use HasFactory;
     
-    protected $fillable = ['name', 'sobrenome','dateofbirth'];
+    protected $fillable = ['firstname', 'lastname','dateofbirth'];
+
+    public function Loginuser(){
+        return $this->hasOne( )
+    }
+
     
 }

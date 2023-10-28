@@ -4,6 +4,14 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 
+/**
+ * This class controls all actions related to material for
+ * the CTRLEmprestimos application.
+ *
+ * @version    v1.2
+ * @author [Maciel Sandes] 
+ */
+
 class UserController extends Controller
 {
     protected $model;

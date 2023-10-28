@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
  * This class controls all actions related to material for
  * the CTRLEmprestimos application.
  *
- * @version    v1.0
+ * @version    v1.2
  * @author [Maciel Sandes] 
  */
 
@@ -42,8 +42,7 @@ class MaterialController extends Controller
  
          //se for passado um ID de um material valido, direciona para a tela de edição de usuario
          return view('materials.show', compact('material'));
-     }
-     
+     }     
     
     //Controle para a edição de material
     public function create()
@@ -70,7 +69,6 @@ class MaterialController extends Controller
   
           return view('materials.edit', compact('material'));
       }
-
  
     //Excluir usuario do dando de dados
     public function destroy($id)
