@@ -56,7 +56,7 @@ class MaterialController extends Controller
     {
         $material = new Material();
         
-        dd($material->create($request->all()));
+        $material->create($request->all());
 
         return redirect()-> route ('materials.index');
     

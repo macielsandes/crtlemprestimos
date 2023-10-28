@@ -23,12 +23,7 @@
     <!--Menu-->
     <header>
         <x-sidebar/>
-    </header>  
-
-    <!--Parte do cabeçalho da pagina-->
-    <nav class="container">
-        <x-section1/>
-    </nav>
+    </header>     
  
     <!--Conteudo da pagina-->
     <section class="container">

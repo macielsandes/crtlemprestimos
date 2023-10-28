@@ -10,6 +10,6 @@ class Loginuser extends Model
 {
     use HasFactory;
     
-    protected $fillable = ['name','dateofbirth'];
+    protected $fillable = [];
 
 }

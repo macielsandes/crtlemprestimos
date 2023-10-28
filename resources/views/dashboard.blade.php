@@ -5,7 +5,10 @@
 {{-- Page content --}}
 @section('content')
 
- 
+  <!--Parte do cabeçalho da pagina-->
+  <nav class="container">
+    <x-section1/>
+    </nav>
     <!-- Dados da pagina -->    
        
         <div class="container">

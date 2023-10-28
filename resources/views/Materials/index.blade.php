@@ -1,35 +1,16 @@
-@extends('layouts/default')
+@extends('layouts.default')
 {{-- Page title --}}
-@section('title', 'Home')
+@section('title', 'Material')
 
 {{-- Page content --}}
 @section('content')
-   
-    <!-- Dados da pagina -->
-    <div class="container mt-3">
-      <h2>Material</h2>   
-  </div>
-      
-  <div class="container mt-6 py-3">      
-              <div class="row d-flex bd-highlight">               
-                  <!--Botao para cadastro de novo usuario--> 
-                  <div class="col"> 
-                    <button class="btn btn-primary rounded-pill px-3" href="{{ route('materials.create') }}" type="button">Novo</button> 
-                  </div>
-                  <div class="col"> 
-                      <a class="btn btn-primary" href="{{ route('materials.create') }}" role="button">Novo Material</a>          
-                  </div>  
-                  
-                  <!--Div da barra de pesquisa-->     
-                  <div class="col">                          
-                      <form class=" d-flex ms-auto p-2 bd-highlight" action="{{ route('materials.index') }}" method="get">
-                          <input class="form-control me-2" type="search" name ="search" placeholder="Pesquisar" aria-label="Pesquisar">                        
-                              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>                     
-                      </form>
-                  </div>
-              </div>
-      </div>
-   
+
+<!--Parte do cabeçalho da pagina-->
+<nav class="container">
+    <x-nav-material/>
+ </nav>   
+    
+<section>
   <!--Inicio da Tabela-->
    <div class="table-responsive">
       <table class="table table-bordered">
@@ -38,7 +19,7 @@
               <tr>
                   <th scope="col">Id</th>
                   <th scope="col">Descrição</th>
-                  <th scope="col">Numero de Serie</th>
+                  <th scope="col">Descrição</th>
                   <th scope="col">Quantidade</th>
               </tr>
           </thead>
@@ -46,8 +27,8 @@
               @foreach ($materials as $material)
                   <tr>
                       <td> {{ $material->id }} </td>
-                      <td> {{ $material->description }} </td>
-                      <td> {{ $material->numberassets }} </td>
+                      <td> {{ $material->nameidentification }} </td>
+                      <td> {{ $material->descriptionMaterial}} </td>
                       <td>{{ $material->qty }} </td>
                       <td> <a href="{{ route('materials.edit', $material->id) }}">Editar></a> </td>
                       <td> <a href="{{ route('materials.show', $material->id) }}">Detalhes></a> </td>
@@ -67,5 +48,6 @@
             </ul>
       </div>
   
-  </div>    
+  </div>  
+</section>  
 @endsection

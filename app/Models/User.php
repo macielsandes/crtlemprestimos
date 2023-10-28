@@ -9,6 +9,6 @@ class User extends Model
 {
     use HasFactory;
     
-    protected $fillable = ['name','dateofbirth'];
+    protected $fillable = ['name', 'sobrenome','dateofbirth'];
     
 }
